@@ -1,3 +1,55 @@
 // -----------------------------------------------------------------------------
 // This file contains CSS helper classes.
 // -----------------------------------------------------------------------------
+
+.grid-menu {
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+    padding: 5px;
+
+    & > * {
+        position: relative;
+        // background-color: white;
+        height: 3px;    
+        transition: 0.3s;
+
+        &:nth-child(1) {
+            width: 30px;
+        }
+
+        &:nth-child(2) {
+            width: 20px;
+            top: 5px;
+        }
+
+        &:nth-child(3) {
+            width: 10px;
+            top: 10px;
+        }
+    }
+
+    &:hover{
+        transform: rotate(180deg);
+        // top: 5px;
+
+        &>*{
+            height: 4px;
+            
+            &:last-child{
+                width: 30px;
+            }
+        }
+    }
+
+    &:active {
+
+        &>*{
+            width: 30px !important;
+        }
+    }
+}
+
+.bg-link-warning {
+    @extend %bg-link-warning;
+}
