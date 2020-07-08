@@ -1,0 +1,28 @@
+{
+  "name": "pizza-farsi",
+  "version": "1.0.0",
+  "description": "the static pizza-farsi template",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/devAmirHemmati/static-templates.git"
+  },
+  "keywords": [
+    "pizza-farsi",
+    "static",
+    "template"
+  ],
+  "author": "Amirreza Hemmati <dev.amirhemmati1382@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/devAmirHemmati/static-templates/issues"
+  },
+  "homepage": "https://gitlab.com/devAmirHemmati/static-templates#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "font-awesome": "^4.7.0"
+  }
+}
