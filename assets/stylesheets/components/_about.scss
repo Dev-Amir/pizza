@@ -1,0 +1,150 @@
+.about {
+    overflow: hidden;
+
+    .about__content {
+        font-size: 19px;
+
+        @include media('lg') {
+            width: 70%; 
+        }
+    }
+
+    .about__card {
+        padding-bottom: 40px;
+        
+        &>div {
+            &:hover {
+                &>div{
+                    animation-name: ACard;
+                    animation-duration: 1.3s;
+    
+                    @keyframes ACard {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+
+                        25% {
+                            transform: rotate(4deg);
+                        }
+
+                        50% {
+                            transform: rotate(-4deg) scale(0.9);
+                        }
+
+                        75% {
+                            transform: scale(1.1);
+                        }
+
+                        100% {
+                            transform: scale(0.9);
+                        }
+                    }
+                }
+            }
+
+            &>div {
+                transition: 0.6s;
+                border-radius: 10px;
+                @include media('sm') {
+                    border: 2px solid #fff;
+                    padding-top: 35px;
+                    padding-bottom: 35px;
+                }
+                @include media('lg') {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    border-color: transparent;
+                    -webkit-box-shadow: inset -3px 10px 71px -28px rgba(0,0,0,0.75);
+                    -moz-box-shadow: inset -3px 10px 71px -28px rgba(0,0,0,0.75);
+                    box-shadow: inset -3px 10px 71px -28px rgba(0,0,0,0.75);
+                    clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 74%, 92% 81%, 0 100%, 0 0);
+                }
+    
+                h3{
+                    color: white;
+                    transition: 0.4;
+
+                    @include media('lg') {
+                        padding-top: 10px;                    
+                    }
+                }
+    
+                p{
+                    color: #ccc;
+                    transition: 0.4;
+                    font-size: 17px;
+                    padding-top: 10px;
+
+                    @include media('lg') {
+                        padding-bottom: 50px;
+                    }
+                }
+
+                &:hover {
+                    border: none !important;
+                    -webkit-box-shadow: inset -3px 10px 115px -88px rgba(0,0,0,0.75);
+                    -moz-box-shadow: inset -3px 10px 115px -88px rgba(0,0,0,0.75);
+                    box-shadow: inset -3px 10px 115px -88px rgba(0,0,0,0.75);
+                    background-color: white;
+
+                    @include media('lg') {
+                        transform: scale(1.1);
+                    }
+
+                    @include media('sm') {
+                        transform: scale(0.9);    
+                    }
+
+                    h3 {
+                        color: #d12e05;
+                    }
+
+                    p{
+                        color: rgb(54, 54, 54);
+                    }
+                }
+            }
+
+            @include media('lg') {
+                &:nth-child(2) {
+                    &>div{
+                        -webkit-box-shadow: inset -3px 10px 115px -88px rgba(0,0,0,0.75);
+                        -moz-box-shadow: inset -3px 10px 115px -88px rgba(0,0,0,0.75);
+                        box-shadow: inset -3px 10px 115px -88px rgba(0,0,0,0.75);
+                        background-color: white;
+                        transform: scale(1.1);
+                        clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 74%, 92% 81%, 0 100%, 0 0);
+                        border-color: white;
+        
+ 
+                        h3 {
+                            color: #d12e05;
+                        }
+    
+                        p{
+                            color: rgb(54, 54, 54);
+                        }
+    
+                        &:hover {
+                            transform: scale(1) !important;
+                            border-radius: 10px !important;
+                            -webkit-box-shadow: inset -3px 10px 71px -28px rgba(0,0,0,0.75) !important;
+                            -moz-box-shadow: inset -3px 10px 71px -28px rgba(0,0,0,0.75) !important;
+                            box-shadow: inset -3px 10px 71px -28px rgba(0,0,0,0.75) !important;
+                            clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 74%, 92% 81%, 0 100%, 0 0) !important;
+                            background: transparent;
+    
+                            h3{
+                                color: white;
+                            }
+    
+                            p{
+                                color: #ccc;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

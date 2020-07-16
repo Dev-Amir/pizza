@@ -53,3 +53,19 @@
 .bg-link-warning {
     @extend %bg-link-warning;
 }
+
+.ltr {
+    direction: ltr;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.select-color-transparent {
+    cursor: default !important;
+
+    &::selection {
+        background-color: transparent;
+    }
+}

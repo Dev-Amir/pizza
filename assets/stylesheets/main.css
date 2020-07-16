@@ -18,6 +18,57 @@
   box-sizing: border-box;
 }
 
+#logo-app {
+  transition: 0.3s;
+}
+#logo-app:hover {
+  animation-name: ALogo;
+  animation-duration: 1.3s;
+}
+@keyframes ALogo {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.8) rotate(10deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(-10deg);
+  }
+  75% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: auto;
+  height: auto;
+  background-color: #b6b4b4;
+}
+@media (min-width: 992px) {
+  html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 11px;
+  }
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 0;
+}
+html::-webkit-scrollbar-thumb:active,
+body::-webkit-scrollbar-thumb:active {
+  border-radius: 10px;
+}
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
 /**
  * Basic typography style for copy text
  */
@@ -56,6 +107,208 @@
   width: 30px !important;
 }
 
+.ltr {
+  direction: ltr;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.select-color-transparent {
+  cursor: default !important;
+}
+.select-color-transparent::selection {
+  background-color: transparent;
+}
+
+.header {
+  width: 100%;
+  height: 904px;
+  background: url("../images/bg-header.png");
+  background-size: cover;
+  overflow: hidden;
+}
+.header .header__content {
+  position: relative;
+  top: 40px;
+}
+.header .header__content h2 {
+  font-style: italic;
+}
+.header .header__content p {
+  width: 450px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+@media (min-width: 0) {
+  .header .header__img-container {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .header .header__img-container {
+    display: block;
+  }
+}
+.header .header__img-container img {
+  position: relative;
+  transform: rotate(15deg);
+  width: 500px;
+  height: 500px;
+}
+@media (min-width: 768px) {
+  .header .header__img-container img {
+    top: -111px;
+    right: 80px;
+  }
+}
+@media (min-width: 992px) {
+  .header .header__img-container img {
+    right: -140px;
+  }
+}
+
+.select-color-transparent {
+  cursor: default;
+}
+.select-color-transparent::selection {
+  background-color: transparent;
+}
+
+.about {
+  overflow: hidden;
+}
+.about .about__content {
+  font-size: 19px;
+}
+@media (min-width: 992px) {
+  .about .about__content {
+    width: 70%;
+  }
+}
+.about .about__card {
+  padding-bottom: 40px;
+}
+.about .about__card > div:hover > div {
+  animation-name: ACard;
+  animation-duration: 1.3s;
+}
+@keyframes ACard {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(-4deg) scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+.about .about__card > div > div {
+  transition: 0.6s;
+  border-radius: 10px;
+}
+@media (min-width: 0) {
+  .about .about__card > div > div {
+    border: 2px solid #fff;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+@media (min-width: 992px) {
+  .about .about__card > div > div {
+    padding-top: 0;
+    padding-bottom: 0;
+    border-color: transparent;
+    -webkit-box-shadow: inset -3px 10px 71px -28px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset -3px 10px 71px -28px rgba(0, 0, 0, 0.75);
+    box-shadow: inset -3px 10px 71px -28px rgba(0, 0, 0, 0.75);
+    clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 74%, 92% 81%, 0 100%, 0 0);
+  }
+}
+.about .about__card > div > div h3 {
+  color: white;
+  transition: 0.4;
+}
+@media (min-width: 992px) {
+  .about .about__card > div > div h3 {
+    padding-top: 10px;
+  }
+}
+.about .about__card > div > div p {
+  color: #ccc;
+  transition: 0.4;
+  font-size: 17px;
+  padding-top: 10px;
+}
+@media (min-width: 992px) {
+  .about .about__card > div > div p {
+    padding-bottom: 50px;
+  }
+}
+.about .about__card > div > div:hover {
+  border: none !important;
+  -webkit-box-shadow: inset -3px 10px 115px -88px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset -3px 10px 115px -88px rgba(0, 0, 0, 0.75);
+  box-shadow: inset -3px 10px 115px -88px rgba(0, 0, 0, 0.75);
+  background-color: white;
+}
+@media (min-width: 992px) {
+  .about .about__card > div > div:hover {
+    transform: scale(1.1);
+  }
+}
+@media (min-width: 0) {
+  .about .about__card > div > div:hover {
+    transform: scale(0.9);
+  }
+}
+.about .about__card > div > div:hover h3 {
+  color: #d12e05;
+}
+.about .about__card > div > div:hover p {
+  color: #363636;
+}
+@media (min-width: 992px) {
+  .about .about__card > div:nth-child(2) > div {
+    -webkit-box-shadow: inset -3px 10px 115px -88px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset -3px 10px 115px -88px rgba(0, 0, 0, 0.75);
+    box-shadow: inset -3px 10px 115px -88px rgba(0, 0, 0, 0.75);
+    background-color: white;
+    transform: scale(1.1);
+    clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 74%, 92% 81%, 0 100%, 0 0);
+    border-color: white;
+  }
+  .about .about__card > div:nth-child(2) > div h3 {
+    color: #d12e05;
+  }
+  .about .about__card > div:nth-child(2) > div p {
+    color: #363636;
+  }
+  .about .about__card > div:nth-child(2) > div:hover {
+    transform: scale(1) !important;
+    border-radius: 10px !important;
+    -webkit-box-shadow: inset -3px 10px 71px -28px rgba(0, 0, 0, 0.75) !important;
+    -moz-box-shadow: inset -3px 10px 71px -28px rgba(0, 0, 0, 0.75) !important;
+    box-shadow: inset -3px 10px 71px -28px rgba(0, 0, 0, 0.75) !important;
+    clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 74%, 92% 81%, 0 100%, 0 0) !important;
+    background: transparent;
+  }
+  .about .about__card > div:nth-child(2) > div:hover h3 {
+    color: white;
+  }
+  .about .about__card > div:nth-child(2) > div:hover p {
+    color: #ccc;
+  }
+}
+
 #navbar-component {
   background-color: #232323;
 }
@@ -68,6 +321,18 @@
   animation-name: AIcon;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
+}
+@media (min-width: 0) {
+  #navbar-component .navbar__module {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 768px) {
+  #navbar-component .navbar__module {
+    width: auto !important;
+    margin-bottom: 0 !important;
+  }
 }
 #navbar-component .icon-container-hover-feature:hover .icon {
   animation-name: AIcon;
@@ -128,30 +393,6 @@
 }
 #navbar-component .current-active:hover a {
   color: white !important;
-}
-#navbar-component #logo {
-  transition: 0.3s;
-}
-#navbar-component #logo:hover {
-  animation-name: ALogo;
-  animation-duration: 1.3s;
-}
-@keyframes ALogo {
-  0% {
-    transform: scale(1);
-  }
-  25% {
-    transform: scale(0.8) rotate(10deg);
-  }
-  50% {
-    transform: scale(1.1) rotate(-10deg);
-  }
-  75% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1.1);
-  }
 }
 @media (min-width: 992px) {
   #navbar-component {
