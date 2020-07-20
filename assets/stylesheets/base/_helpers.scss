@@ -13,7 +13,7 @@
         // background-color: white;
         height: 3px;    
         transition: 0.3s;
-
+        
         &:nth-child(1) {
             width: 30px;
         }
@@ -30,11 +30,8 @@
     }
 
     &:hover{
-        transform: rotate(180deg);
-        // top: 5px;
 
         &>*{
-            height: 4px;
             
             &:last-child{
                 width: 30px;

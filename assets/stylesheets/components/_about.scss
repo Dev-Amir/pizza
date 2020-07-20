@@ -13,36 +13,15 @@
         padding-bottom: 40px;
         
         &>div {
+
             &:hover {
                 &>div{
-                    animation-name: ACard;
-                    animation-duration: 1.3s;
-    
-                    @keyframes ACard {
-                        0% {
-                            transform: rotate(0deg);
-                        }
-
-                        25% {
-                            transform: rotate(4deg);
-                        }
-
-                        50% {
-                            transform: rotate(-4deg) scale(0.9);
-                        }
-
-                        75% {
-                            transform: scale(1.1);
-                        }
-
-                        100% {
-                            transform: scale(0.9);
-                        }
-                    }
+                    transition: 0.4;
+                    transform: scale(0.9);
                 }
             }
 
-            &>div {
+            &>div{
                 transition: 0.6s;
                 border-radius: 10px;
                 @include media('sm') {
@@ -57,42 +36,91 @@
                     -webkit-box-shadow: inset -3px 10px 71px -28px rgba(0,0,0,0.75);
                     -moz-box-shadow: inset -3px 10px 71px -28px rgba(0,0,0,0.75);
                     box-shadow: inset -3px 10px 71px -28px rgba(0,0,0,0.75);
-                    clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 74%, 92% 81%, 0 100%, 0 0);
+                    // clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 74%, 92% 81%, 0 100%, 0 0);
                 }
-    
-                h3{
-                    color: white;
+
+                h3 {
                     transition: 0.4;
 
                     @include media('lg') {
                         padding-top: 10px;                    
-                    }
+                    }  
                 }
-    
+
                 p{
-                    color: #ccc;
                     transition: 0.4;
                     font-size: 17px;
                     padding-top: 10px;
 
                     @include media('lg') {
-                        padding-bottom: 50px;
+                        padding-bottom: 20px;
+                    }     
+                }
+            }
+
+            &>div { 
+                position: relative;
+                padding-top: 100px;
+
+                .about__card_icon{
+                    position: absolute;
+                    background-color: white;
+                    transition: 0.4s;
+                    border: 2px solid white;
+                    left: calc(50% - 40px);
+                    top: 10px;
+                    
+                    img {
+                        transition: 0.5s;
                     }
+                }   
+
+                h3{
+                    color: white;
+                }
+    
+                p{
+                    color: #ccc;
                 }
 
                 &:hover {
-                    border: none !important;
+                    border-color: transparent !important;
                     -webkit-box-shadow: inset -3px 10px 115px -88px rgba(0,0,0,0.75);
                     -moz-box-shadow: inset -3px 10px 115px -88px rgba(0,0,0,0.75);
                     box-shadow: inset -3px 10px 115px -88px rgba(0,0,0,0.75);
                     background-color: white;
+                    padding-top: 45px;
 
-                    @include media('lg') {
-                        transform: scale(1.1);
-                    }
+                    .about__card_icon{
+                        border-color: #d12e05;
+                        top: -20% !important;
 
-                    @include media('sm') {
-                        transform: scale(0.9);    
+                        .fly-animation {
+                            animation-name: AFly;
+                            transform: rotate(-90deg) translate(-10px, 0);
+                            animation-duration: 1.5s;
+                            animation-delay: 0.5s;
+                            animation-fill-mode: forwards;
+
+                            @keyframes AFly {
+                                from {
+                                    transform: rotate(-90deg);
+                                }
+
+                                to {
+                                    opacity: 0;
+                                    transform: rotate(-120deg) translate(500px, 0);
+                                }
+                            }
+                        }
+
+                        .medal-animation {
+                            transform: scale(1.1) rotate(30deg);
+                        }
+
+                        .flower-animation {
+                            transform: rotate(180deg);
+                        }
                     }
 
                     h3 {
@@ -105,46 +133,25 @@
                 }
             }
 
-            @include media('lg') {
-                &:nth-child(2) {
-                    &>div{
-                        -webkit-box-shadow: inset -3px 10px 115px -88px rgba(0,0,0,0.75);
-                        -moz-box-shadow: inset -3px 10px 115px -88px rgba(0,0,0,0.75);
-                        box-shadow: inset -3px 10px 115px -88px rgba(0,0,0,0.75);
-                        background-color: white;
-                        transform: scale(1.1);
-                        clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 74%, 92% 81%, 0 100%, 0 0);
-                        border-color: white;
+            // @include media('lg') {
+            //     &:nth-child(2) {
+            //         &>div {
+            //             border: none !important;
+            //             -webkit-box-shadow: inset -3px 10px 115px -88px rgba(0,0,0,0.75);
+            //             -moz-box-shadow: inset -3px 10px 115px -88px rgba(0,0,0,0.75);
+            //             box-shadow: inset -3px 10px 115px -88px rgba(0,0,0,0.75);
+            //             background-color: white;
         
- 
-                        h3 {
-                            color: #d12e05;
-                        }
-    
-                        p{
-                            color: rgb(54, 54, 54);
-                        }
-    
-                        &:hover {
-                            transform: scale(1) !important;
-                            border-radius: 10px !important;
-                            -webkit-box-shadow: inset -3px 10px 71px -28px rgba(0,0,0,0.75) !important;
-                            -moz-box-shadow: inset -3px 10px 71px -28px rgba(0,0,0,0.75) !important;
-                            box-shadow: inset -3px 10px 71px -28px rgba(0,0,0,0.75) !important;
-                            clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 74%, 92% 81%, 0 100%, 0 0) !important;
-                            background: transparent;
-    
-                            h3{
-                                color: white;
-                            }
-    
-                            p{
-                                color: #ccc;
-                            }
-                        }
-                    }
-                }
-            }
+            //             h3 {
+            //                 color: #d12e05;
+            //             }
+        
+            //             p{
+            //                 color: rgb(54, 54, 54);
+            //             }
+            //         }
+            //     }
+            // }
         }
     }
 }

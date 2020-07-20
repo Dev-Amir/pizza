@@ -94,12 +94,6 @@ body::-webkit-scrollbar-thumb:hover {
   width: 10px;
   top: 10px;
 }
-.grid-menu:hover {
-  transform: rotate(180deg);
-}
-.grid-menu:hover > * {
-  height: 4px;
-}
 .grid-menu:hover > *:last-child {
   width: 30px;
 }
@@ -191,25 +185,8 @@ body::-webkit-scrollbar-thumb:hover {
   padding-bottom: 40px;
 }
 .about .about__card > div:hover > div {
-  animation-name: ACard;
-  animation-duration: 1.3s;
-}
-@keyframes ACard {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(4deg);
-  }
-  50% {
-    transform: rotate(-4deg) scale(0.9);
-  }
-  75% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(0.9);
-  }
+  transition: 0.4;
+  transform: scale(0.9);
 }
 .about .about__card > div > div {
   transition: 0.6s;
@@ -230,11 +207,9 @@ body::-webkit-scrollbar-thumb:hover {
     -webkit-box-shadow: inset -3px 10px 71px -28px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: inset -3px 10px 71px -28px rgba(0, 0, 0, 0.75);
     box-shadow: inset -3px 10px 71px -28px rgba(0, 0, 0, 0.75);
-    clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 74%, 92% 81%, 0 100%, 0 0);
   }
 }
 .about .about__card > div > div h3 {
-  color: white;
   transition: 0.4;
 }
 @media (min-width: 992px) {
@@ -243,70 +218,75 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 .about .about__card > div > div p {
-  color: #ccc;
   transition: 0.4;
   font-size: 17px;
   padding-top: 10px;
 }
 @media (min-width: 992px) {
   .about .about__card > div > div p {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
 }
+.about .about__card > div > div {
+  position: relative;
+  padding-top: 100px;
+}
+.about .about__card > div > div .about__card_icon {
+  position: absolute;
+  background-color: white;
+  transition: 0.4s;
+  border: 2px solid white;
+  left: calc(50% - 40px);
+  top: 10px;
+}
+.about .about__card > div > div .about__card_icon img {
+  transition: 0.5s;
+}
+.about .about__card > div > div h3 {
+  color: white;
+}
+.about .about__card > div > div p {
+  color: #ccc;
+}
 .about .about__card > div > div:hover {
-  border: none !important;
+  border-color: transparent !important;
   -webkit-box-shadow: inset -3px 10px 115px -88px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: inset -3px 10px 115px -88px rgba(0, 0, 0, 0.75);
   box-shadow: inset -3px 10px 115px -88px rgba(0, 0, 0, 0.75);
   background-color: white;
+  padding-top: 45px;
 }
-@media (min-width: 992px) {
-  .about .about__card > div > div:hover {
-    transform: scale(1.1);
+.about .about__card > div > div:hover .about__card_icon {
+  border-color: #d12e05;
+  top: -20% !important;
+}
+.about .about__card > div > div:hover .about__card_icon .fly-animation {
+  animation-name: AFly;
+  transform: rotate(-90deg) translate(-10px, 0);
+  animation-duration: 1.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes AFly {
+  from {
+    transform: rotate(-90deg);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(-120deg) translate(500px, 0);
   }
 }
-@media (min-width: 0) {
-  .about .about__card > div > div:hover {
-    transform: scale(0.9);
-  }
+.about .about__card > div > div:hover .about__card_icon .medal-animation {
+  transform: scale(1.1) rotate(30deg);
+}
+.about .about__card > div > div:hover .about__card_icon .flower-animation {
+  transform: rotate(180deg);
 }
 .about .about__card > div > div:hover h3 {
   color: #d12e05;
 }
 .about .about__card > div > div:hover p {
   color: #363636;
-}
-@media (min-width: 992px) {
-  .about .about__card > div:nth-child(2) > div {
-    -webkit-box-shadow: inset -3px 10px 115px -88px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: inset -3px 10px 115px -88px rgba(0, 0, 0, 0.75);
-    box-shadow: inset -3px 10px 115px -88px rgba(0, 0, 0, 0.75);
-    background-color: white;
-    transform: scale(1.1);
-    clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 74%, 92% 81%, 0 100%, 0 0);
-    border-color: white;
-  }
-  .about .about__card > div:nth-child(2) > div h3 {
-    color: #d12e05;
-  }
-  .about .about__card > div:nth-child(2) > div p {
-    color: #363636;
-  }
-  .about .about__card > div:nth-child(2) > div:hover {
-    transform: scale(1) !important;
-    border-radius: 10px !important;
-    -webkit-box-shadow: inset -3px 10px 71px -28px rgba(0, 0, 0, 0.75) !important;
-    -moz-box-shadow: inset -3px 10px 71px -28px rgba(0, 0, 0, 0.75) !important;
-    box-shadow: inset -3px 10px 71px -28px rgba(0, 0, 0, 0.75) !important;
-    clip-path: polygon(50% 0%, 100% 0, 100% 60%, 100% 74%, 92% 81%, 0 100%, 0 0) !important;
-    background: transparent;
-  }
-  .about .about__card > div:nth-child(2) > div:hover h3 {
-    color: white;
-  }
-  .about .about__card > div:nth-child(2) > div:hover p {
-    color: #ccc;
-  }
 }
 
 #navbar-component {
@@ -375,9 +355,6 @@ body::-webkit-scrollbar-thumb:hover {
 #navbar-component .nav-item .grid-menu > * {
   background-color: #ffc107;
   transition: 0.3s;
-}
-#navbar-component .nav-item .grid-menu:hover {
-  top: 5px;
 }
 #navbar-component .nav-item .grid-menu:hover > * {
   background-color: #ba8b00 !important;
