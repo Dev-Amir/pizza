@@ -170,6 +170,95 @@ body::-webkit-scrollbar-thumb:hover {
   background-color: transparent;
 }
 
+#navbar-component {
+  background-color: #232323;
+}
+#navbar-component .icon {
+  font-size: 25px;
+  cursor: pointer;
+  transition: 0.9s;
+}
+#navbar-component .icon-hover-feature:hover {
+  animation-name: AIcon;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@media (min-width: 0) {
+  #navbar-component .navbar__module {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+@media (min-width: 768px) {
+  #navbar-component .navbar__module {
+    width: auto !important;
+    margin-bottom: 0 !important;
+  }
+}
+#navbar-component .icon-container-hover-feature:hover .icon {
+  animation-name: AIcon;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes AIcon {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  50% {
+    transform: rotate(-70deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(25deg) scale(1.3);
+  }
+}
+#navbar-component .link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 17px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3;
+}
+#navbar-component .link-icon:hover {
+  color: #c9c8c8;
+}
+#navbar-component .nav-item {
+  position: relative;
+  border-radius: 5px;
+}
+#navbar-component .nav-item .grid-menu {
+  padding: 8px 16px;
+  height: 100%;
+  top: -5px;
+}
+#navbar-component .nav-item .grid-menu > * {
+  background-color: #ffc107;
+  transition: 0.3s;
+}
+#navbar-component .nav-item .grid-menu:hover > * {
+  background-color: #ba8b00 !important;
+}
+#navbar-component .nav-item a {
+  transition: 0.3s;
+}
+#navbar-component .nav-item a:active {
+  transform: scale(1.3) !important;
+}
+#navbar-component .nav-item:hover a {
+  color: #ba8b00 !important;
+}
+#navbar-component .current-active:hover a {
+  color: white !important;
+}
+@media (min-width: 992px) {
+  #navbar-component {
+    padding-left: 75px !important;
+    padding-right: 75px !important;
+  }
+}
+
 .about {
   overflow: hidden;
 }
@@ -289,92 +378,65 @@ body::-webkit-scrollbar-thumb:hover {
   color: #363636;
 }
 
-#navbar-component {
-  background-color: #232323;
+.discount-products {
+  position: relative;
+  width: 100%;
+  background: #d13104 url("../images/pattern-1.png");
 }
-#navbar-component .icon {
-  font-size: 25px;
-  cursor: pointer;
-  transition: 0.9s;
+.discount-products ul {
+  margin-bottom: 0;
 }
-#navbar-component .icon-hover-feature:hover {
-  animation-name: AIcon;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
+.discount-products ul li {
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.discount-products ul li > div:first-child {
+  background-color: #d13104;
+  border-radius: 20px;
+  width: auto;
 }
 @media (min-width: 0) {
-  #navbar-component .navbar__module {
-    width: 100%;
-    margin-bottom: 15px;
+  .discount-products ul li > div:first-child h3, .discount-products ul li > div:first-child p {
+    text-align: center;
   }
-}
-@media (min-width: 768px) {
-  #navbar-component .navbar__module {
-    width: auto !important;
-    margin-bottom: 0 !important;
-  }
-}
-#navbar-component .icon-container-hover-feature:hover .icon {
-  animation-name: AIcon;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-@keyframes AIcon {
-  0% {
-    transform: rotate(0) scale(1);
-  }
-  50% {
-    transform: rotate(-70deg) scale(0.8);
-  }
-  100% {
-    transform: rotate(25deg) scale(1.3);
-  }
-}
-#navbar-component .link-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 17px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3;
-}
-#navbar-component .link-icon:hover {
-  color: #c9c8c8;
-}
-#navbar-component .nav-item {
-  position: relative;
-  border-radius: 5px;
-}
-#navbar-component .nav-item .grid-menu {
-  padding: 8px 16px;
-  height: 100%;
-  top: -5px;
-}
-#navbar-component .nav-item .grid-menu > * {
-  background-color: #ffc107;
-  transition: 0.3s;
-}
-#navbar-component .nav-item .grid-menu:hover > * {
-  background-color: #ba8b00 !important;
-}
-#navbar-component .nav-item a {
-  transition: 0.3s;
-}
-#navbar-component .nav-item a:active {
-  transform: scale(1.3) !important;
-}
-#navbar-component .nav-item:hover a {
-  color: #ba8b00 !important;
-}
-#navbar-component .current-active:hover a {
-  color: white !important;
 }
 @media (min-width: 992px) {
-  #navbar-component {
-    padding-left: 75px !important;
-    padding-right: 75px !important;
+  .discount-products ul li > div:first-child h3, .discount-products ul li > div:first-child p {
+    text-align: left;
+  }
+}
+.discount-products ul li > div:first-child p {
+  max-width: 85%;
+  line-height: 1.4;
+}
+.discount-products ul li > div:first-child a {
+  margin-top: 50px;
+}
+@media (min-width: 0) {
+  .discount-products ul li > div:first-child {
+    padding: 50px 20px;
+  }
+}
+@media (min-width: 992px) {
+  .discount-products ul li > div:first-child {
+    padding: 30px 20px;
+  }
+}
+@media (min-width: 0) {
+  .discount-products ul li {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .discount-products ul li {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 85%;
   }
 }
 
