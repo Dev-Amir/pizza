@@ -409,8 +409,12 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 .discount-products ul li > div:first-child p {
-  max-width: 85%;
   line-height: 1.4;
+}
+@media (min-width: 992px) {
+  .discount-products ul li > div:first-child p {
+    max-width: 85%;
+  }
 }
 .discount-products ul li > div:first-child a {
   margin-top: 50px;
@@ -437,6 +441,47 @@ body::-webkit-scrollbar-thumb:hover {
     flex-wrap: nowrap;
     flex-direction: row;
     width: 85%;
+  }
+}
+
+.goodPizza {
+  padding-top: 280px;
+  padding-bottom: 50px;
+}
+.goodPizza .goodPizza__items > div > div {
+  border-radius: 10px;
+  position: relative;
+  padding-top: 100px;
+  background-color: transparent;
+  border: 3px solid rgba(234, 0, 0, 0.8);
+}
+.goodPizza .goodPizza__items > div > div .goodPizza__items_price {
+  margin-top: 40px;
+}
+.goodPizza .goodPizza__items > div > div img {
+  position: absolute;
+  top: -50%;
+}
+@media (min-width: 0) {
+  .goodPizza .goodPizza__items > div:nth-child(2), .goodPizza .goodPizza__items > div:nth-child(3) {
+    margin-top: 220px;
+  }
+}
+@media (min-width: 768px) {
+  .goodPizza .goodPizza__items > div:nth-child(2) {
+    margin-top: 0;
+  }
+  .goodPizza .goodPizza__items > div:nth-child(3) {
+    margin-top: 280px;
+  }
+}
+@media (min-width: 992px) {
+  .goodPizza .goodPizza__items > div {
+    margin-top: 0 !important;
+  }
+  .goodPizza .goodPizza__items > div:nth-child(2) > div {
+    background-color: rgba(234, 0, 0, 0.8);
+    border: 3px solid transparent;
   }
 }
 

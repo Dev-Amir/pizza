@@ -28,9 +28,11 @@
                     }
                 }
                 p {
-                    max-width: 85%;
                     line-height: 1.4;
 
+                    @include media('lg') {
+                      max-width: 85%;
+                    }
                     @include media('xg') {
                         width: 1000px;
                     }
