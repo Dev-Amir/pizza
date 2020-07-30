@@ -1,0 +1,44 @@
+.advertise {
+    background: url('../images/pattern-1.png') rgba(0, 0, 0, 0.7);
+    margin: 50px 0;
+
+    &>div {
+        padding: 25px 0;
+
+        img {
+
+            @include media('sm') {
+                width: 250px;
+                height: 250px;
+            }
+
+            @include media('lg') {
+                width: 320px;
+                height: 320px;
+            }
+        }
+
+        h3 {
+            background-color: #090909;
+
+            @include media('sm') {
+                font-size: 30px !important;
+                width: 100%;
+            }
+
+            @include media('lg') {
+                width: auto;
+                font-size: 45px !important;
+            }
+        }
+
+        a {
+            background-color: $discount_section_background !important;
+            padding: 18px 50px !important;
+        }
+
+        @include media('lg') {
+            height: 230px;
+        }
+    }
+}

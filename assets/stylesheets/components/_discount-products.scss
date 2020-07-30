@@ -1,7 +1,7 @@
 .discount-products {
     position: relative;
     width: 100%;
-    // height: 300px;
+    overflow: hidden;
     background: $discount_section_background url('../images/pattern-1.png');
 
     ul {

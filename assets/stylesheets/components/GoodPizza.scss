@@ -1,0 +1,53 @@
+.goodPizza {
+  padding-top: 280px;
+  padding-bottom: 50px;
+
+  .goodPizza__items {
+
+    &>div {
+      &>div {
+        border-radius: 10px;
+        position: relative;
+        padding-top: 100px;
+        background-color: transparent;
+        border: 3px solid rgba(234, 0, 0, 0.8);
+
+        .goodPizza__items_price {
+          margin-top: 40px;
+        }
+
+        img {
+          position: absolute;
+          top: -50%;
+        }
+      }
+
+      @include media('sm') {
+        &:nth-child(2), &:nth-child(3) {
+          margin-top: 220px;
+        }
+      }
+
+      @include media('md') {
+        &:nth-child(2) {
+          margin-top: 0;
+        }
+
+        &:nth-child(3) {
+          margin-top: 280px;
+        }
+      }
+
+      @include media('lg') {
+        margin-top: 0 !important;
+
+        &:nth-child(2) {
+          &>div {
+            background-color: rgba(234, 0, 0, 0.8);
+            border: 3px solid transparent;
+          }
+        }
+      }
+    }
+  }
+}

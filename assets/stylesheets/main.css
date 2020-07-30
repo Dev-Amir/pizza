@@ -381,6 +381,7 @@ body::-webkit-scrollbar-thumb:hover {
 .discount-products {
   position: relative;
   width: 100%;
+  overflow: hidden;
   background: #d13104 url("../images/pattern-1.png");
 }
 .discount-products ul {
@@ -482,6 +483,50 @@ body::-webkit-scrollbar-thumb:hover {
   .goodPizza .goodPizza__items > div:nth-child(2) > div {
     background-color: rgba(234, 0, 0, 0.8);
     border: 3px solid transparent;
+  }
+}
+
+.advertise {
+  background: url("../images/pattern-1.png") rgba(0, 0, 0, 0.7);
+  margin: 50px 0;
+}
+.advertise > div {
+  padding: 25px 0;
+}
+@media (min-width: 0) {
+  .advertise > div img {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media (min-width: 992px) {
+  .advertise > div img {
+    width: 320px;
+    height: 320px;
+  }
+}
+.advertise > div h3 {
+  background-color: #090909;
+}
+@media (min-width: 0) {
+  .advertise > div h3 {
+    font-size: 30px !important;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .advertise > div h3 {
+    width: auto;
+    font-size: 45px !important;
+  }
+}
+.advertise > div a {
+  background-color: #d13104 !important;
+  padding: 18px 50px !important;
+}
+@media (min-width: 992px) {
+  .advertise > div {
+    height: 230px;
   }
 }
 
