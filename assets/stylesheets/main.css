@@ -530,6 +530,108 @@ body::-webkit-scrollbar-thumb:hover {
   }
 }
 
+.application {
+  position: relative;
+  background-size: cover;
+  background-image: url("../images/app-background.jpg");
+  top: 80px;
+}
+.application::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.application .application__content {
+  position: relative;
+  z-index: 2;
+  width: 85%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.application .application__content > div:last-child {
+  width: 65%;
+  padding: 0 30px;
+}
+.application .application__content > div:last-child h3 {
+  font-size: 36px;
+}
+.application .application__content > div:last-child .application__content_description {
+  font-size: 25px;
+  word-wrap: break-word;
+}
+.application .application__content > div:last-child form div {
+  display: flex;
+  border-radius: 3px;
+  flex-direction: column-reverse;
+}
+.application .application__content > div:last-child form div input {
+  border-radius: 0 !important;
+  border: none !important;
+  padding: 32px 15px !important;
+  font-size: 24px !important;
+  font-weight: bold !important;
+  letter-spacing: 5px;
+  width: 100%;
+}
+.application .application__content > div:last-child form div input:focus {
+  box-shadow: none !important;
+}
+.application .application__content > div:last-child form div input::placeholder {
+  font-size: 18px !important;
+}
+@media (min-width: 992px) {
+  .application .application__content > div:last-child form div input {
+    width: 100% !important;
+  }
+}
+.application .application__content > div:last-child form div button {
+  width: 100%;
+  margin-top: 25px;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+@media (min-width: 992px) {
+  .application .application__content > div:last-child form div button {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: 0 !important;
+    border-radius: 0 10px 0 0 !important;
+    width: 30% !important;
+  }
+}
+@media (min-width: 992px) {
+  .application .application__content > div:last-child form div {
+    background-color: white;
+    flex-direction: row;
+  }
+}
+.application .application__content > div:last-child .application__content_links a {
+  background-color: #101010;
+  color: white !important;
+}
+.application .application__content > div:last-child .application__content_links {
+  margin-top: 80px;
+  flex-wrap: wrap;
+}
+@media (min-width: 992px) {
+  .application .application__content > div:last-child .application__content_links {
+    flex-wrap: nowrap !important;
+    overflow: hidden;
+  }
+}
+.application .application__content > div:last-child p, .application .application__content > div:last-child h3, .application .application__content > div:last-child label, .application .application__content > div:last-child input {
+  text-align: center !important;
+}
+@media (min-width: 992px) {
+  .application .application__content > div:last-child p, .application .application__content > div:last-child h3, .application .application__content > div:last-child label, .application .application__content > div:last-child input {
+    text-align: left !important;
+  }
+}
+
 .home-container {
   background-image: url("../images/bg.jpg");
   width: 100%;
